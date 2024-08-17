@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.row-container {
+  width: 100%;
+  display: flex;
+}
+.row-div {
+  flex: 1;
+}
+.hovered {
+  background-color: red;
+}
+.button-limit {
+  display: flex;
+  align-items: center;
+  height: 3%;
+  justify-content: space-evenly;
+  outline: 2px solid red;
+}
+.button-limit button:hover {
+  background-color: lightblue;
+}
+.button-limit button {
+  background-color: #5783db;
+  height: 95%;
+  border-radius: 10%;
+  font-size: 0.5rem;
+  border: 1px solid;
+}
