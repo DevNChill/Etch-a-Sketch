@@ -2,6 +2,7 @@
 let container = document.querySelector(".container");
 let limit = 16;
 const gridSize = 960;
+let globalOpacity = 0.2;
 
 //--------------Function to Generate Random Color of divs----------------
 function getRandomColorComponent() {
@@ -31,6 +32,11 @@ function setGrid() {
       const green = getRandomColorComponent();
       const blue = getRandomColorComponent();
       cell.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      globalOpacity += 0.1;
+      if (globalOpacity >= 1) {
+        globalOpacity = 0.2;
+      }
+      cell.style.opacity = globalOpacity;
     });
   });
 }
