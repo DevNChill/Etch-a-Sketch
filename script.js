@@ -59,6 +59,8 @@ function resetGrid() {
   }
   randomColor = false;
   opacityEnable = false;
+  randomButton.style.backgroundColor = "#5783db";
+  opacityButton.style.backgroundColor = "#5783db";
 }
 setGrid();
 
