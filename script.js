@@ -29,9 +29,10 @@ function setGrid() {
     }
     container.appendChild(rowcontainer);
   }
-  const cells = document.querySelectorAll(".row-div");
-  cells.forEach((cell) => {
-    cell.addEventListener("mouseenter", () => {
+  container.addEventListener("mouseover", (event) => {
+    if (event.target.classList.contains("row-div")) {
+      let cell = event.target;
+      console.log(cell);
       if (randomColor) {
         const red = getRandomColorComponent();
         const green = getRandomColorComponent();
@@ -49,7 +50,7 @@ function setGrid() {
         globalOpacity = 1;
       }
       cell.style.opacity = globalOpacity;
-    });
+    }
   });
 }
 
